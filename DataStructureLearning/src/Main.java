@@ -3,7 +3,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<double[]> numbers = new ArrayList<>() {{
+        //Arguments for the methods
+        List<double[]> doubles = new ArrayList<>() {{
             add(new double[] { 2, 5, 1, 1, 4 });
             add(new double[] { 1000, 8, 9000 });
             add(new double[] { 1000, 8 });
@@ -20,12 +21,9 @@ public class Main {
             add("potato");
         }};
 
-        for (double[] doubleArray : numbers) {
-            double maxNumber = 0;
-            for (double number : doubleArray) {
-                maxNumber = Introduction.maxValue(doubleArray);
-            }
-            System.out.println(maxNumber);
+        //Execution of the methods
+        for (double[] doubleArray : doubles) {
+            System.out.println(Introduction.maxValue(doubleArray));
         }
 
         for (String sentence : sentences) {
