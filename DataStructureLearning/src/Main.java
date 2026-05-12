@@ -21,6 +21,26 @@ public class Main {
             add("potato");
         }};
 
+        List<Integer[]> ints = new ArrayList<>() {{
+            add(new Integer[] { 4, 90, 68, 6, -2 });
+            add(new Integer[] { 14, 40, 36, 3 });
+            add(new Integer[] { 30, 24, 2048, 0, 12, 50 });
+            add(new Integer[] { 7, 7, 7, 7 });
+            add(new Integer[] { 100 });
+            add(new Integer[] { 1, 2, 4, 6, 8 });
+            add(new Integer[] { 42, 18, 96, 4, 70, 12, 58, 30, 84, 2 });
+        }};
+
+        Integer[] isPrimeValues = { 2, 3, 4, 6, 6, 7, 8, 25, 31, 2017, 2048, 1, 713 };
+
+        Integer[] fizzbuzzs = { 11, 2, 16, 32 };
+
+        List<List<String>> pairs = new ArrayList<>() {{
+            add(new ArrayList<>(List.of("a", "b", "c")));
+            add(new ArrayList<>(List.of("a", "b", "c", "d")));
+            add(new ArrayList<>(List.of("cherry", "cranberry", "banana", "blueberry", "lime", "papaya")));
+        }};
+
         //Execution of the methods
         for (double[] doubleArray : doubles) {
             System.out.println(Introduction.maxValue(doubleArray));
@@ -28,6 +48,22 @@ public class Main {
 
         for (String sentence : sentences) {
             System.out.println(Introduction.longestWord(sentence));
+        }
+
+        for (Integer[] intsList : ints) {
+            System.out.println(Introduction.allEven(intsList));
+        }
+
+        for (int isPrimeValue : isPrimeValues)  {
+            System.out.println(Introduction.isPrime(isPrimeValue));
+        }
+
+        for (int fizzbuzz : fizzbuzzs)  {
+            System.out.println(BigO.fizzBuzz(fizzbuzz));
+        }
+
+        for (List<String> pair : pairs) {
+            System.out.println(BigO.pairs(pair));
         }
     }
 }
