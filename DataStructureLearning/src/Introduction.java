@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Introduction {
     static double maxValue(double[] numbers) {
         double maxDouble = Double.NEGATIVE_INFINITY;
@@ -22,5 +24,29 @@ public class Introduction {
         }
 
         return longest;
+    }
+
+    static boolean allEven(Integer[] nums) {
+        for (int num : nums) {
+            if (num % 2 != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    static boolean isPrime(int number) {
+
+        if (number < 2) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
